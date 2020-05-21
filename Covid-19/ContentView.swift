@@ -5,30 +5,7 @@ struct ContentView: View {
         NavigationView {
                     List {
                         TopInfoView()
-                        ForEach(0 ..< 4) { _ in
-                            NavigationLink(destination: Text("Coming")){
-                                HStack {
-                                    ZStack {
-                                        Circle()
-                                            .foregroundColor(.yellow)
-                                            .frame(width: 44)
-                                        
-                                        Image(systemName: "staroflife.fill")
-                                            .foregroundColor(.white)
-                                    }
-                                    .padding(.trailing)
-                                    
-                                    VStack(alignment: .leading) {
-                                        Text("About COVID-19 ")
-                                            .fontWeight(.bold)
-                                        
-                                        Text("""
-An up-to-date rundom of the virus and its symptoms
-""")
-                                    }
-                                }
-                            }
-                        }
+                        MainListView()
                     }
         .navigationBarTitle("")
         .navigationBarHidden(true)
@@ -57,7 +34,7 @@ struct TopLogoView : View {
                  .frame(width: 44)
             Spacer()
          }
-        .padding(.vertical, -88)
+        .padding(.vertical, -8)
     }
     
 }
@@ -101,13 +78,20 @@ struct HeaderView : View {
 struct TexInfoView: View {
     var body: some View{
         VStack(alignment: .leading){
-            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-//            .lineLimit(nil)
-                    .padding(.bottom)
+            Text("""
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+""")
+            .lineLimit(2)
+            .padding(.bottom)
+        
                 
-                Text("Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat exercitation. ")
+            Text("""
+consectetur adipiscing elit,
+sed do eiusmod
+tempor incididunt
+""")
         }
-        .frame(width: UIScreen.main.bounds.width / 2.2)
+        .frame(width: UIScreen.main.bounds.width / 1.8)
 //            .frame(maxWidth: .infinity)
         
     }

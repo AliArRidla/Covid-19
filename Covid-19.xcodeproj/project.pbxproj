@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE675DEB2475F03C00268D0D /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE675DEA2475F03C00268D0D /* MainListView.swift */; };
+		CE675DED2475FEB400268D0D /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE675DEC2475FEB400268D0D /* AboutView.swift */; };
 		CE908FF7247525970037E6B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE908FF6247525970037E6B5 /* AppDelegate.swift */; };
 		CE908FF9247525970037E6B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE908FF8247525970037E6B5 /* SceneDelegate.swift */; };
 		CE908FFB247525970037E6B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE908FFA247525970037E6B5 /* ContentView.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE675DEA2475F03C00268D0D /* MainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListView.swift; sourceTree = "<group>"; };
+		CE675DEC2475FEB400268D0D /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		CE908FF3247525970037E6B5 /* Covid-19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid-19.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE908FF6247525970037E6B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE908FF8247525970037E6B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				CE9090012475259A0037E6B5 /* LaunchScreen.storyboard */,
 				CE9090042475259A0037E6B5 /* Info.plist */,
 				CE908FFE2475259A0037E6B5 /* Preview Content */,
+				CE675DEA2475F03C00268D0D /* MainListView.swift */,
+				CE675DEC2475FEB400268D0D /* AboutView.swift */,
 			);
 			path = "Covid-19";
 			sourceTree = "<group>";
@@ -268,8 +274,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE908FF7247525970037E6B5 /* AppDelegate.swift in Sources */,
+				CE675DEB2475F03C00268D0D /* MainListView.swift in Sources */,
 				CE908FF9247525970037E6B5 /* SceneDelegate.swift in Sources */,
 				CE908FFB247525970037E6B5 /* ContentView.swift in Sources */,
+				CE675DED2475FEB400268D0D /* AboutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
