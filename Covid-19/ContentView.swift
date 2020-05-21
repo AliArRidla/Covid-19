@@ -1,10 +1,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isShowing = false
     var body: some View {
         NavigationView {
                     List {
-                        TopInfoView()
+                        TopInfoView(isShowing: $isShowing)
+                        .sheet(isPresented: $isShowing) {
+                            ResultsView(isShowing: self.$isShowing)
+                        }
                         MainListView()
                     }
         .navigationBarTitle("")
@@ -41,12 +45,14 @@ struct TopLogoView : View {
 
 //MARK: - New .swift file.
 struct TopInfoView : View {
+    @Binding var isShowing: Bool
+    
     var body: some View {
         VStack(alignment: .leading) {
             TopLogoView()
             HeaderView()
             TextAndImageInfoView()
-            VButtons()
+            VButtons(isShowing: $isShowing)
         }
     .padding()
         .background(
@@ -115,13 +121,17 @@ struct TextAndImageInfoView:View {
 
 //MARK: - New .swift file.
 struct VButtons: View {
-    let buttonLabels = ["Start Screening", "View Previous"]
+    let buttonLabels = ["Start Screening", "View Previous Results"]
+    
+    @Binding var isShowing: Bool
     
     var body: some View {
         VStack {
             ForEach(buttonLabels, id: \.self) { label in
                 Button(action: {
-                    //do
+                    if  self.buttonLabels.contains("Results"){
+                    self.isShowing.toggle()
+                    }
                 }){
                     Text(label)
                         .fontWeight(.bold)

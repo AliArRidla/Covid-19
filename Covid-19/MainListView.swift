@@ -3,6 +3,7 @@ import SwiftUI
 struct MainListView: View {
     let infoCells = [
         MainCellData(image: "text.badge.plus", color: .red, title: "What You Can Do", body: "Same text An up-to-date rundom of the virus and its symptoms", aboutCellData: [
+        AboutCellData(image: "dial.fill", color: .yellow, title: "Washing your hands", previewBody: "Lots of preview od stuff", body: "Lots more text about stuff"),
         AboutCellData(image: "dial.fill", color: .yellow, title: "Washing your hands", previewBody: "Lots of preview od stuff", body: "Lots more text about stuff")
         ]),
         MainCellData(image: "bolt.circle.fill", color: .orange, title: "What You Can Do", body: "Same text An up-to-date rundom of the virus and its symptoms", aboutCellData: [
